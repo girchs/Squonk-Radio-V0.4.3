@@ -143,7 +143,6 @@ async def playlist(message: types.Message):
 
     kb = InlineKeyboardMarkup(row_width=1)
     text = "🎵 Playlist:"
-"
     for f in songs:
         meta_path = os.path.join(folder, f + ".json")
         title = os.path.splitext(f)[0]
