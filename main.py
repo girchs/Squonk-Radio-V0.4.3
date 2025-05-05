@@ -150,8 +150,7 @@ async def playlist(message: types.Message):
             with open(meta_path) as meta:
                 m = json.load(meta)
                 title = m.get("title", title)
-        text += f"• {title}
-"
+        text += f"• {title}"
         kb.add(InlineKeyboardButton(f"▶️ {title}", callback_data=f"play:{f}"))
     await message.reply(text, reply_markup=kb)
 
