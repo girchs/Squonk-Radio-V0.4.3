@@ -60,8 +60,8 @@ async def start(message: types.Message):
         return
     if str(message.from_user.id) not in AUTHORIZED_USERS:
         return await message.reply("⛔️ Only the Squonk Overlord can use this bot.")
-    await message.reply("👋 Welcome to Squonk Radio V0.4.3!
-Use /setup to link your group.")
+    await message.reply("👋 Welcome to Squonk Radio V0.4.3!\nUse /setup to link your group.")
+
 
 @dp.message_handler(commands=["setup"])
 async def setup(message: types.Message):
