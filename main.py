@@ -142,7 +142,7 @@ async def playlist(message: types.Message):
         return await message.reply("❌ Playlist is empty.")
 
     kb = InlineKeyboardMarkup(row_width=1)
-    text = "🎵 Playlist:
+    text = "🎵 Playlist:"
 "
     for f in songs:
         meta_path = os.path.join(folder, f + ".json")
